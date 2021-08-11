@@ -6,7 +6,6 @@ from flaskext.mysql import MySQL
 from flask_sqlalchemy import SQLAlchemy
 
 #creacion de objeto de tipo flask
-from werkzeug.utils import redirect
 
 app = Flask(__name__, static_url_path='/static')
 
