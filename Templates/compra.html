@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta author="Berenice Briseño Monico">
+    <meta description="Es una pagina web">
+    <meta keywords="html, aplicacion web">
+    <meta >
+    <title>Markeing</title>
+    <link rel="shortcut icon" href="./static/images/mesa3.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./static/CSS/stylesform.css" type="text/css">
+</head>
+
+<body>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/Bootstrap">Historia</a></li>
+                    <li><a href="/rejilla">Catálogo</a></li>
+                    <li><a href="#">Cotiza aquí</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="title">
+            <h1>Regístrate Y Pide Tu Cotización</h1>
+        </div>
+        <div class="grid">
+  <div class="anuncio">
+      <img src="./static/images/anuncio.jpg">
+  </div>
+    <div class="formulario">
+        <form action="{{url_for('guardar_formulario')}}" method="post">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="usuario@gmail.com" required>
+            <label for="p"  type="text">Producto</label>
+            <select id="p" name="producto">
+                <option value="0">...</option>
+                    <option value="Mesa para oficina">Mesa para oficina</option>
+                    <option value="Mesa para hogar">Mesa para hogar</option>
+                    <option value="Mesa para lugares públicos">Mesa para lugares públicos</option>
+            </select>
+            <label for="des">Describe lo que buscas o necesitas</label>
+            <br><br>
+            <textarea id="des" name="descripcion" rows="8" cols="88" placeholder="Escriba algo" required></textarea>
+            <br><br>
+            <input type="checkbox" name="tyc" value="tyc" required> Acepto términos y condiciones.
+            <br><br>
+            <div class="enviar">
+            <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+            <div class="resultados">
+                <h1>Resultados</h1>
+                <table id="titulo">
+                    <thead>
+                    <tr>
+                        <th><b>ID</b></th>
+                        <th><b>Nombre</b></th>
+                        <th><b>Apellido</b></th>
+                        <th><b>Correo electrónico</b></th>
+                        <th><b>Producto</b></th>
+                        <th><b>Descripción</b></th>
+                        <th><b>Editar</b></th>
+                        <th><b>Eliminar</b></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for producto in lista_productos %}
+                        <tr>
+                            <td>{{producto.0}}</td>
+                            <td>{{producto.1}}</td>
+                            <td>{{producto.2}}</td>
+                            <td>{{producto.3}}</td>
+                            <td>{{producto.4}}</td>
+                            <td>{{producto.5}}</td>
+                            <td><a href="/consultar_producto/{{producto.0}}">Editar</a></td>
+                            <td><a href="/eliminar_producto/{{producto.0}}">Eliminar</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+</div>
+</body>
+</html>

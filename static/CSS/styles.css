@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  width 100%;
+  }
+  /* comentarios */
+  body {
+  font-family: Comic Sans MS, Helvetica, sans-serif;
+  }
+
+  .menu{
+      background-color: #000000;
+      width: 100%;
+      height: 75px;
+      text-align: left;
+  }
+  .menu li{
+      display: inline-block;
+      font: 18px Helvetica;
+      padding: 25px;
+      list-style:none;
+  }
+  .menu li a{
+      color: white;
+      text-decoration: none;
+      font-weight: bolder;
+  }
+  .slogan h2{
+       text-align: center;
+       font-family: Segoe Print;
+       font-size: 50px;
+       color: #125F9E;
+  }
+  .slogan p{
+       text-align: center;
+  }
+  .desc p, h3{
+       font-family: Arial;
+       font-size: 18px;
+  }
+   .desc h3{
+       font-size: 30px;
+   }
+
+/*estilo para el encabezado de tu pagina */
+  .header {
+      grid-area: header;
+      background-color: #ffffff;
+      padding: 30px; /*margen*/
+      text-align: center;
+      font-size: 35px;
+  }
+
+  .grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'left left middle middle right right'
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+  }
+
+  .header img{
+       width: 300px;
+       height: 250px:
+  }
+
+  .left,
+  .middle,
+  .right {
+       padding: 20px;
+       height: 450px;
+  }
+
+    /* Style the left column */
+  .left {
+        grid-area: left;
+        background-color: #C297E6;
+        text-align: center;
+  }
+
+    /* Style the middle column */
+  .middle {
+        grid-area: middle;
+        background-color: #F56C67;
+        text-align: center;
+  }
+
+    /* Style the right column */
+  .right {
+        grid-area: right;
+        background-color: #859FE6;
+        text-align: center;
+  }
+  .footerr {
+        grid-area: footer;
+        background-color: #f1f1f1;
+        padding: 80px;
+        text-align: center;
+        font-size: 25px;
+        color: #05529E;
+  }

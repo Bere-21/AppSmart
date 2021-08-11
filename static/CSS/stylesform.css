@@ -1,0 +1,153 @@
+     .menu{
+          background-color: #000000;
+          width: 100%;
+          height: 75px;
+          text-align: left;
+     }
+     .menu li{
+          display: inline-block;
+          font:  18px Helvetica;
+          padding: 25px;
+          list-style:none;
+    }
+    .menu li a{
+          color: white;
+          text-decoration: none;
+          font-weight: bolder;
+     }
+
+    .title h1{
+          font: 35px Consolas;
+          text-align: center;
+    }
+    /* Style de compra */
+
+   * {
+      box-sizing: border-box;
+      width 100%;
+    }
+
+    body {
+      font: 18px Century Gothic;
+    }
+    /* The grid container */
+    .grid {
+      display: grid;
+      grid-template-areas:
+        'header header header header header header'
+        'left middle middle middle middle right'
+        'footer footer footer footer footer footer';
+      /* grid-column-gap: 10px; - if you want gap between the columns */
+    }
+
+    /* Style the header */
+    .anuncio{
+      padding: 10px;
+      height: 500px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Style the middle column */
+    .formulario{
+      grid-area: middle;
+      position: relative;
+      top: 0px;
+      left: 80px;
+      padding: 10px;
+      height: 630px;
+      width: 700px;
+    }
+
+    /* Style the left column */
+    .anuncio{
+      grid-area: left;
+      text-align: center;
+    }
+    .anuncio img{
+        width: 250px;
+        height: 420px;
+        position: relative;
+        top: 60px;
+    }
+
+    /* Style del formulario */
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 5px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+    }
+    input[type=email]{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      box-sizing: border-box;
+    }
+    /* boton */
+    input[type=submit] {
+      width: 50%;
+      background-color: #FF5A36;
+      color: white;
+      padding: 15px 20px;
+      margin: 0px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    input[type=submit]:hover {
+      background-color: #E03610;
+    }
+
+    .formulario{
+      border-radius: 20px;
+      background-color: #A3FFE5;
+      padding: 30px;
+    }
+    .enviar{
+      text-align: center;
+    }
+
+    .resultados{
+      grid-area: footer;
+      background-size:100%;
+      padding: 20px;
+      height: 300px;
+    }
+    .resultados h1{
+    font: 35px Consolas;
+    }
+
+    /* estilo de la tabla */
+
+    #titulo {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #C5DDFC;
+    }
+
+    #titulo td, #titulo th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #titulo tr:nth-child(even){background-color: #C5DDFC;}
+
+    #titulo tr:hover {background-color: #F9CBB2;}
+
+    #titulo th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #154A94;
+      color: white;
+    }
+
