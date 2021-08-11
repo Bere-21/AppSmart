@@ -117,4 +117,4 @@ def Bootstrap_html():
 #Definicion del archivo principal de ejecucion
 if __name__ == '__main__':
     #Configuracion del puerto de escucha del servidor web
-    app.run(port=80,debug=True)
+    app.run()
