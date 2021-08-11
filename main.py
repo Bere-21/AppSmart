@@ -18,7 +18,6 @@ conn = psycopg2.connect(
     password="3751dae87212b13d06c20be2201e22759da7fef31df081a1b1151d82a79ed73d"
 )
 
-app = Flask(__name__, static_url_path='/static')
 #Creacion de ruta raiz para la pagina principal
 @app.route('/')
 #Creacion de funcion para mostrar el index
